@@ -54,10 +54,10 @@ RM = /home/brendan/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E r
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/brendan/Projects/AES
+CMAKE_SOURCE_DIR = /home/brendan/Projects/aes_m14397109
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/brendan/Projects/AES/build
+CMAKE_BINARY_DIR = /home/brendan/Projects/aes_m14397109/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -96,7 +96,7 @@ src/clean: src/CMakeFiles/AES.dir/clean
 # Directory level rules for directory test
 
 # Recursive "all" directory target.
-test/all: test/CMakeFiles/AES_TEST.dir/all
+test/all: test/CMakeFiles/AES_UNIT_TEST.dir/all
 .PHONY : test/all
 
 # Recursive "preinstall" directory target.
@@ -104,7 +104,7 @@ test/preinstall:
 .PHONY : test/preinstall
 
 # Recursive "clean" directory target.
-test/clean: test/CMakeFiles/AES_TEST.dir/clean
+test/clean: test/CMakeFiles/AES_UNIT_TEST.dir/clean
 .PHONY : test/clean
 
 #=============================================================================
@@ -114,14 +114,14 @@ test/clean: test/CMakeFiles/AES_TEST.dir/clean
 src/CMakeFiles/AES.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/AES.dir/build.make src/CMakeFiles/AES.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/AES.dir/build.make src/CMakeFiles/AES.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/brendan/Projects/AES/build/CMakeFiles --progress-num=1,2 "Built target AES"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/brendan/Projects/aes_m14397109/build/CMakeFiles --progress-num=1,2 "Built target AES"
 .PHONY : src/CMakeFiles/AES.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/AES.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/AES/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/aes_m14397109/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/AES.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/AES/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/aes_m14397109/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/AES.dir/rule
 
 # Convenience name for target.
@@ -134,30 +134,30 @@ src/CMakeFiles/AES.dir/clean:
 .PHONY : src/CMakeFiles/AES.dir/clean
 
 #=============================================================================
-# Target rules for target test/CMakeFiles/AES_TEST.dir
+# Target rules for target test/CMakeFiles/AES_UNIT_TEST.dir
 
 # All Build rule for target.
-test/CMakeFiles/AES_TEST.dir/all:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/AES_TEST.dir/build.make test/CMakeFiles/AES_TEST.dir/depend
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/AES_TEST.dir/build.make test/CMakeFiles/AES_TEST.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/brendan/Projects/AES/build/CMakeFiles --progress-num=3,4 "Built target AES_TEST"
-.PHONY : test/CMakeFiles/AES_TEST.dir/all
+test/CMakeFiles/AES_UNIT_TEST.dir/all:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/AES_UNIT_TEST.dir/build.make test/CMakeFiles/AES_UNIT_TEST.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/AES_UNIT_TEST.dir/build.make test/CMakeFiles/AES_UNIT_TEST.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/brendan/Projects/aes_m14397109/build/CMakeFiles --progress-num=3,4 "Built target AES_UNIT_TEST"
+.PHONY : test/CMakeFiles/AES_UNIT_TEST.dir/all
 
 # Build rule for subdir invocation for target.
-test/CMakeFiles/AES_TEST.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/AES/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/AES_TEST.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/AES/build/CMakeFiles 0
-.PHONY : test/CMakeFiles/AES_TEST.dir/rule
+test/CMakeFiles/AES_UNIT_TEST.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/aes_m14397109/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/AES_UNIT_TEST.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/aes_m14397109/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/AES_UNIT_TEST.dir/rule
 
 # Convenience name for target.
-AES_TEST: test/CMakeFiles/AES_TEST.dir/rule
-.PHONY : AES_TEST
+AES_UNIT_TEST: test/CMakeFiles/AES_UNIT_TEST.dir/rule
+.PHONY : AES_UNIT_TEST
 
 # clean rule for target.
-test/CMakeFiles/AES_TEST.dir/clean:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/AES_TEST.dir/build.make test/CMakeFiles/AES_TEST.dir/clean
-.PHONY : test/CMakeFiles/AES_TEST.dir/clean
+test/CMakeFiles/AES_UNIT_TEST.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/AES_UNIT_TEST.dir/build.make test/CMakeFiles/AES_UNIT_TEST.dir/clean
+.PHONY : test/CMakeFiles/AES_UNIT_TEST.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

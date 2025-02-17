@@ -1,4 +1,4 @@
-# Install script for directory: /home/brendan/Projects/AES/test
+# Install script for directory: /home/brendan/Projects/aes_m14397109/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

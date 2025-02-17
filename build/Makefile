@@ -57,10 +57,10 @@ RM = /home/brendan/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E r
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/brendan/Projects/AES
+CMAKE_SOURCE_DIR = /home/brendan/Projects/aes_m14397109
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/brendan/Projects/AES/build
+CMAKE_BINARY_DIR = /home/brendan/Projects/aes_m14397109/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/AES/build/CMakeFiles /home/brendan/Projects/AES/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/aes_m14397109/build/CMakeFiles /home/brendan/Projects/aes_m14397109/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/AES/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brendan/Projects/aes_m14397109/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,17 +130,17 @@ AES/fast:
 .PHONY : AES/fast
 
 #=============================================================================
-# Target rules for targets named AES_TEST
+# Target rules for targets named AES_UNIT_TEST
 
 # Build rule for target.
-AES_TEST: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AES_TEST
-.PHONY : AES_TEST
+AES_UNIT_TEST: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AES_UNIT_TEST
+.PHONY : AES_UNIT_TEST
 
 # fast build rule for target.
-AES_TEST/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/AES_TEST.dir/build.make test/CMakeFiles/AES_TEST.dir/build
-.PHONY : AES_TEST/fast
+AES_UNIT_TEST/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/AES_UNIT_TEST.dir/build.make test/CMakeFiles/AES_UNIT_TEST.dir/build
+.PHONY : AES_UNIT_TEST/fast
 
 # Help Target
 help:
@@ -151,7 +151,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AES"
-	@echo "... AES_TEST"
+	@echo "... AES_UNIT_TEST"
 .PHONY : help
 
 

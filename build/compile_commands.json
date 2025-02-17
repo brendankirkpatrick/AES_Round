@@ -1,12 +1,12 @@
 [
 {
-  "directory": "/home/brendan/Projects/AES/build/src",
-  "command": "/usr/bin/c++   -g -fdiagnostics-color=always -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wuseless-cast -Wsuggest-override -std=gnu++20 -o CMakeFiles/AES.dir/main.cpp.o -c /home/brendan/Projects/AES/src/main.cpp",
-  "file": "/home/brendan/Projects/AES/src/main.cpp"
+  "directory": "/home/brendan/Projects/aes_m14397109/build/src",
+  "command": "/usr/bin/c++   -g -fdiagnostics-color=always -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wuseless-cast -Wsuggest-override -std=gnu++20 -o CMakeFiles/AES.dir/main.cpp.o -c /home/brendan/Projects/aes_m14397109/src/main.cpp",
+  "file": "/home/brendan/Projects/aes_m14397109/src/main.cpp"
 },
 {
-  "directory": "/home/brendan/Projects/AES/build/test",
-  "command": "/usr/bin/c++   -g -fdiagnostics-color=always -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wuseless-cast -Wsuggest-override -std=gnu++20 -o CMakeFiles/AES_TEST.dir/test.cpp.o -c /home/brendan/Projects/AES/test/test.cpp",
-  "file": "/home/brendan/Projects/AES/test/test.cpp"
+  "directory": "/home/brendan/Projects/aes_m14397109/build/test",
+  "command": "/usr/bin/c++   -g -fdiagnostics-color=always -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wuseless-cast -Wsuggest-override -std=gnu++20 -o CMakeFiles/AES_UNIT_TEST.dir/test.cpp.o -c /home/brendan/Projects/aes_m14397109/test/test.cpp",
+  "file": "/home/brendan/Projects/aes_m14397109/test/test.cpp"
 }
 ]

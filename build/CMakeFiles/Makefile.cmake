@@ -24,12 +24,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/brendan/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake"
   "/home/brendan/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.25/Modules/Platform/Linux.cmake"
   "/home/brendan/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.25/Modules/Platform/UnixPaths.cmake"
-  "/home/brendan/Projects/AES/CMakeLists.txt"
+  "/home/brendan/Projects/aes_m14397109/CMakeLists.txt"
   "CMakeFiles/3.25.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.2/CMakeSystem.cmake"
-  "/home/brendan/Projects/AES/src/CMakeLists.txt"
-  "/home/brendan/Projects/AES/test/CMakeLists.txt"
+  "/home/brendan/Projects/aes_m14397109/src/CMakeLists.txt"
+  "/home/brendan/Projects/aes_m14397109/test/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -48,5 +48,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/AES.dir/DependInfo.cmake"
-  "test/CMakeFiles/AES_TEST.dir/DependInfo.cmake"
+  "test/CMakeFiles/AES_UNIT_TEST.dir/DependInfo.cmake"
   )

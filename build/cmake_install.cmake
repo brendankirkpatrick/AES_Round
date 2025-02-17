@@ -1,4 +1,4 @@
-# Install script for directory: /home/brendan/Projects/AES
+# Install script for directory: /home/brendan/Projects/aes_m14397109
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/brendan/Projects/AES/build/src/cmake_install.cmake")
+  include("/home/brendan/Projects/aes_m14397109/build/src/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/brendan/Projects/AES/build/test/cmake_install.cmake")
+  include("/home/brendan/Projects/aes_m14397109/build/test/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/brendan/Projects/AES/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/brendan/Projects/aes_m14397109/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
