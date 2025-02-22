@@ -3,20 +3,25 @@ cmake_minimum_required(VERSION 3.21)
 if (NOT DEFINED CMAKE_CXX_STANDARD)
     set(CMAKE_CXX_STANDARD 20)
 endif()
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(
   AES
   VERSION 1.0.0
   DESCRIPTION "AES Project for Network Security"
-  LANGUAGES CXX C
+  LANGUAGES CXX
   )
 
 # Generate compile_commands.json to make it easier to work with clang based tools
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# Set build type
 set(CMAKE_BUILD_TYPE
       Debug
       CACHE STRING "Choose the type of build." FORCE)
+
+# Option that sets if warnings are treated as errors
+option(WARNINGS_AS_ERRORS "Treat Warnings As Errors" ON)
 
 # Set the possible values of build type for cmake-gui, ccmake
 set_property(
@@ -71,8 +76,6 @@ target_compile_options(
     $<$<COMPILE_LANGUAGE:CXX>:${PROJECT_WARNINGS_CXX}>
 )
 
-option(WARNINGS_AS_ERRORS "Treat Warnings As Errors" ON)
-
 # enable clang tidy macro
 macro(enable_clang_tidy target WARNINGS_AS_ERRORS)
   find_program(CLANGTIDY clang-tidy)
@@ -110,12 +113,6 @@ macro(enable_clang_tidy target WARNINGS_AS_ERRORS)
 endmacro()
 enable_clang_tidy(options ${WARNINGS_AS_ERRORS})
 
-# Get all project files
-file(GLOB_RECURSE
-     ALL_CXX_SOURCE_FILES
-     *.[chi]pp *.[chi]xx *.cc *.hh *.ii *.[CHI]
-     )
-
 # Makes output colorful
 add_compile_options(-fdiagnostics-color=always)
 
@@ -126,4 +123,10 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
 
 # Add our src folder to build
 add_subdirectory(src)
+
+# Enable tests
+enable_testing()
 add_subdirectory(test)
+add_test(NAME AES_UNIT_TEST COMMAND AES_UNIT_TEST)
+set_tests_properties(AES_UNIT_TEST PROPERTIES TIMEOUT 30) 
+
