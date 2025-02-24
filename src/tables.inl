@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-constexpr inline uint8_t SBox(uint8_t input)
+[[nodiscard]] constexpr inline uint8_t SBox(uint8_t input)
 {
     // I got this from the internet to avoid typing it so hopefully its right
     const uint8_t sbox_lookup[256] = 
@@ -29,12 +29,20 @@ constexpr inline uint8_t SBox(uint8_t input)
     return sbox_lookup[input];
 }
 
-constexpr inline uint8_t RoundConstant(int round_number)
+[[nodiscard]] constexpr inline uint8_t RoundConstant(size_t round_number)
 {
-    const uint8_t round_lookup[10] = 
-    { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1B, 0x36 };
+    const uint8_t round_lookup[11] = 
+    { 0x01, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1B, 0x36 };
 
-    return round_lookup[round_number - 1];
+    return round_lookup[round_number];
+}
+
+[[nodiscard]] constexpr inline uint8_t MixColMatrix(size_t matrix_index)
+{
+    const uint8_t matrix[16] =
+    { 2, 3, 1, 1, 1, 2, 3, 1, 1, 1, 2, 3, 3, 1, 1, 2};
+
+    return matrix[matrix_index];
 }
 
 #endif

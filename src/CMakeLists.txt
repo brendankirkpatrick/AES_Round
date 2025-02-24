@@ -2,6 +2,7 @@
 set(HEADER_FILES
     AES.h
     FileIO.h
+    MatrixUtil.h
     )
 
 # Source Files

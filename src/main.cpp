@@ -68,6 +68,7 @@ int main(int argc, char* argv[])
     }
 
     aes(plaintext, key, key_type);
+    writeFileBuffer("./data/result.txt", plaintext, "");
     
     return 0;
 }
