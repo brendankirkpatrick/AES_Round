@@ -143,7 +143,7 @@ int mix_columns(std::span<uint8_t> message)
     {
         for(int row = 0; row < 4; row++)
         {
-            // treat XOR operation as matrix addition in GF(2^8) 
+            // Treat XOR operation as matrix addition in GF(2^8) 
             msg_buf[4 * col + row] = 
                 gf28_mult(MixColMatrix(4 * row + 0), message[4 * col + 0]) ^ 
                 gf28_mult(MixColMatrix(4 * row + 1), message[4 * col + 1]) ^ 
@@ -188,20 +188,14 @@ int generate_subkey(std::span<uint8_t> subkey, const size_t round)
 
     uint8_t g_w[4]; 
     std::copy(w3.begin(), w3.end(), g_w);
+
+    // Steps for g(w)
     std::rotate(g_w, g_w + 1, g_w + 4);
     std::transform(g_w, g_w + 4, g_w, &SBox);
     g_w[0] ^= RoundConstant(round);
-    /*
-    auto w3_it = w3.begin();
-    while(w3_it != w3.end())
-    {
-        *w3_it = SBox(*w3_it);
-        ++w3_it;
-    }
-    w3[0] ^= RoundConstant(round);
-    */
 
-    auto XOR = [](span<uint8_t> a, span<uint8_t> b) -> void
+    // XOR a and b, modifying and returning a
+    auto XOR = [](span<uint8_t> a, span<uint8_t> b) -> span<uint8_t>
     {
         auto a_it = a.begin();
         auto b_it = b.begin();
@@ -211,12 +205,13 @@ int generate_subkey(std::span<uint8_t> subkey, const size_t round)
             ++a_it;
             ++b_it;
         }
+        return a;
     };
 
-    XOR(w0, g_w);
-    XOR(w1, w0); // w0 is now w4
-    XOR(w2, w1); // w1 is now w5
-    XOR(w3, w2); // w2 is now w6
+    span<uint8_t> w4 = XOR(w0, g_w);
+    span<uint8_t> w5 = XOR(w1, w4);
+    span<uint8_t> w6 = XOR(w2, w5); 
+    XOR(w3, w6);
 
     return 0;
 }
